@@ -1,0 +1,20 @@
+1.
+The third thread ('v') cracked the password.
+
+2.
+In terms of memory sharing, each thread is using the same shared memory from the parent process. Each 
+thread is starting the password cracking at different characters, which allows it to solve the password
+much faster. All three threads are running the ThreadBots.java file at the same time, which is why all
+threads need to be terminated once one of them finds the solution. All of the threads have access to the
+variables in the parent process, so all other threads are able to see when the password has been by found
+only one of them. 
+
+3.
+Through the use of a timer that begins at the thread's creation and ends at the thread's completion, we
+can see that it takes less time to crack the password using the multithreaded password compared to the
+single threaded. The single threaded approach took 210,272,300 nano seconds compared to the much more
+efficient multithreaded approach which took 98,488,300 nano seconds.
+
+4.
+Even after switching the order of testing to be i, v, t, the multithreaded approach is still faster. While
+the gap between the two approaches is decreased, multithreaded will still be a faster method.
